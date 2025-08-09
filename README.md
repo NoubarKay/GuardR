@@ -33,5 +33,5 @@ Guard.For(startDate)
      .Before(endDate);
 ```
 
-##📜 License
+## 📜 License
 MIT License — do whatever you want, just don’t sue me.
