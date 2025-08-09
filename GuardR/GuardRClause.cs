@@ -1,13 +1,14 @@
 using System.Runtime.CompilerServices;
+using GuardR.Extensions;
 
 namespace GuardR;
 
 public class GuardClause<T>
 {
-    public T Value { get; }
-    public string ParamName { get; }
+    protected T Value { get; }
+    protected string ParamName { get; }
 
-    public GuardClause(T value, string paramName)
+    protected GuardClause(T value, string paramName)
     {
         Value = value;
         ParamName = paramName;
@@ -17,11 +18,16 @@ public class GuardClause<T>
 
 public static class Guard
 {
-    public static GuardClause<T> For<T>(
-        T value,
-        [CallerArgumentExpression("value")] string paramName = ""
-    )
+    public static NumericGuardClause<T> Numeric<T>(T value, 
+        [CallerArgumentExpression("value")] string paramName = "")
+        where T : struct, IComparable<T>
     {
-        return new GuardClause<T>(value, paramName);
+        return new NumericGuardClause<T>(value, paramName ?? nameof(value));
+    }
+    
+    public static StringGuardClause String(string value, 
+        [CallerArgumentExpression("value")] string paramName = "")
+    {
+        return new StringGuardClause(value, paramName ?? nameof(value));
     }
 }
