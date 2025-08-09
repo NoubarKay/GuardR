@@ -36,10 +36,10 @@ public void RegisterUser(string username, int age)
 ```csharp
 public void RegisterUser(string username, int age)
 {
-    Guard.For(username, nameof(username))
+    Guard.String(username)
          .NotNullOrWhiteSpace();
 
-    Guard.For(age, nameof(age))
+    Guard.Numeric(age)
          .Min(18)
          .Max(72);
 
@@ -58,17 +58,17 @@ public void RegisterUser(string username, int age)
 using GuardR;
 
 // Numeric validation
-Guard.For(age)
+Guard.Numeric(age)
      .GreaterThan(0)
      .LessThanOrEqualTo(120);
 
 // String validation
-Guard.For(name)
+Guard.String(name)
      .NotNullOrWhiteSpace()
      .MaxLength(50);
 
 // Date validation
-Guard.For(startDate)
+Guard.Date(startDate)
      .Before(endDate);
 ```
 
