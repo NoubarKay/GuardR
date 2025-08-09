@@ -46,6 +46,11 @@ public void RegisterUser(string username, int age)
     // ...rest of the method
 }
 ```
+### Benefits:
+- Cleaner & more readable: Less boilerplate and repetitive if statements
+- Consistent error messages: All guards throw the same exception types with clear, standardized messages
+- Fluent chaining: Validate multiple conditions on the same parameter without repetition
+- Centralized validation logic: Easier to extend and maintain guards across your codebase
 ---
 
 ## 🚀 Quick Start
