@@ -13,9 +13,43 @@ It helps you validate parameters in a clean, expressive way — so your methods 
 - Consistent, human-readable exception messages
 
 ---
+## Why Use GuardR? A Before/After Example
+
+### Before (using `if` statements)
+
+```csharp
+public void RegisterUser(string username, int age)
+{
+    if (string.IsNullOrWhiteSpace(username))
+        throw new ArgumentException("username cannot be null or whitespace", nameof(username));
+
+    if (age < 18)
+        throw new ArgumentOutOfRangeException(nameof(age), "age must be at least 18");
+
+    if (age > 120)
+        throw new ArgumentOutOfRangeException(nameof(age), "age must be less than or equal to 120");
+
+    // ...rest of the method
+}
+
+### After (using GuardR)
+```csharp
+public void RegisterUser(string username, int age)
+{
+    Guard.For(username, nameof(username))
+         .NotNullOrWhiteSpace();
+
+    Guard.For(age, nameof(age))
+         .Min(18)
+         .Max(72);
+
+    // ...rest of the method
+}
+```
+---
 
 ## 🚀 Quick Start
-```cs
+```csharp
 using GuardR;
 
 // Numeric validation
