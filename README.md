@@ -31,7 +31,7 @@ public void RegisterUser(string username, int age)
 
     // ...rest of the method
 }
-
+```
 ### After (using GuardR)
 ```csharp
 public void RegisterUser(string username, int age)
