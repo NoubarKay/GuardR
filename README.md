@@ -13,7 +13,7 @@ It helps you validate parameters in a clean, expressive way — so your methods 
 - Consistent, human-readable exception messages
 
 ---
-## Why Use GuardR? A Before/After Example
+## ❔ Why Use GuardR? A Before/After Example
 
 ### Before (using `if` statements)
 
