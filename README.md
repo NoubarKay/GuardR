@@ -1,4 +1,6 @@
 ![work in progress](https://img.shields.io/badge/status-WIP-yellow)
+[![Open Issues](https://img.shields.io/github/issues/NoubarKay/GuardR.svg)](https://github.com/<OWNER>/<REPO>/issues)
+
 
 # GuardR
 
