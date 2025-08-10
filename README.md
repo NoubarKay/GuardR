@@ -4,6 +4,16 @@
 It helps you validate parameters in a clean, expressive way — so your methods fail fast with clear, consistent error messages.
 
 ---
+> **⚠️ Work in progress**
+>
+> **GuardR is currently under active development.** The public API is not yet stable and may change between releases. Use in production at your own risk.
+>
+> - Features in the README are a snapshot of the current implementation and the roadmap may evolve.
+> - Contributions, bug reports and feature requests are very welcome — please open an issue or submit a pull request on the repo.
+>
+> ![work in progress](https://img.shields.io/badge/status-WIP-yellow)
+---
+
 
 ## ✨ Features
 - **Fluent, readable syntax**: `Guard.For(age).GreaterThan(18).LessThanOrEqualsTo(72)`
