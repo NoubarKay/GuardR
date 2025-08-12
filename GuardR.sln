@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardR", "GuardR\GuardR.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardR.Tests", "GuardR.Tests\GuardR.Tests.csproj", "{A1201190-443C-418F-833B-D72474279A44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuardR.Benchmark", "GuardR.Benchmark\GuardR.Benchmark.csproj", "{EB88DFA7-B677-4365-A731-81CE9D6469FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A1201190-443C-418F-833B-D72474279A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1201190-443C-418F-833B-D72474279A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1201190-443C-418F-833B-D72474279A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB88DFA7-B677-4365-A731-81CE9D6469FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB88DFA7-B677-4365-A731-81CE9D6469FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB88DFA7-B677-4365-A731-81CE9D6469FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB88DFA7-B677-4365-A731-81CE9D6469FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
